@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="title">Formulario de registro</h1>
+        <p id="description">Por favor complete el formulario de encuesta a continuación:</p>
+
+        <form id="survey-form" novalidate>
+            <label for="name" id="name-label">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Ingrese su nombre" required>
+
+            <label for="email" id="email-label">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Ingrese su email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+
+            <label for="number" id="number-label">Edad:</label>
+            <input type="number" id="number" name="number" placeholder="Ingrese un número" min="0" max="10" required>
+
+            <label for="dropdown">Selecciona una opción:</label>
+            <select id="dropdown" name="dropdown" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="option1">Opción 1</option>
+                <option value="option2">Opción 2</option>
+            </select>
+
+            <label>Elige una:</label>
+            <div>
+                <input type="radio" name="radio-group" id="radio1" value="radio1" required>
+                <label for="radio1">Opción 1</label>
+            </div>
+            <div>
+                <input type="radio" name="radio-group" id="radio2" value="radio2" required>
+                <label for="radio2">Opción 2</label>
+            </div>
+
+            <label>Marque todo lo que corresponda:</label>
+            <div>
+                <input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1">
+                <label for="checkbox1">Opción 1</label>
+            </div>
+            <div>
+                <input type="checkbox" id="checkbox2" name="checkbox2" value="checkbox2">
+                <label for="checkbox2">Opción 2</label>
+            </div>
+
+
+            <label for="comments">Comentarios adicionales:</label>
+            <textarea id="comments" name="comments" placeholder="Ingrese sus comentarios"></textarea>
+
+            <button type="submit" id="submit">Enviar</button>
+        </form>
+    </div>
+
+</body>
+</html>
